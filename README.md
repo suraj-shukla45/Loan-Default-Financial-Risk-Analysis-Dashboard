@@ -10,29 +10,11 @@ Financial institutions need to know **which applicant characteristics actually p
 
 ---
 
-## Key Insight (the finding that matters)
-
-**Employment type is the strongest predictor of default in this dataset — everything else is noise.**
-
-| Employment Type | Default Rate |
-|---|---:|
-| Unemployed | 3.4% |
-| Part-time | 3.0% |
-| Self-employed | 2.9% |
-| Full-time | 2.4% |
-
-Unemployed applicants default at a rate **~42% higher (relative)** than full-time applicants. This is the only variable in the dataset with a meaningfully large spread.
-
-**Recommendation:** Underwriting/pricing models should weight employment type explicitly as a risk factor. A flat interest rate or approval threshold across employment types is leaving risk unpriced.
-
-**What did *not* predict risk (and why that matters):**
-Age group, education level, credit category, and mortgage status all showed loan amounts and default behavior within a narrow band (roughly 1–2% variation) — statistically close to flat. Two possible explanations, and this is a limitation worth stating rather than hiding:
-1. The underwriting process may already be neutral on these factors (a good sign), or
-2. These fields carry weak signal in this particular dataset (it shows characteristics of a synthetic/benchmark dataset rather than raw production data).
-
-Either way, the honest conclusion is: **don't build a story around variables that don't move the needle.** The employment-type signal is the one worth acting on.
-
----
+##Key Insights
+Employment type: Unemployed applicants show the highest default rate, while full-time applicants show the lowest in the displayed employment-type analysis.
+Loan purpose: Total loan amounts are quite similar across purposes, staying around 6.5B.
+Age group: Average loan amounts remain relatively consistent across age groups, around 127K.
+Yearly default rate: Default rates fluctuate only slightly across 2013–2018, remaining around 11.5%–11.75%.
 
 ## Report Structure
 
