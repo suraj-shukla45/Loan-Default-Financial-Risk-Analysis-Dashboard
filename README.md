@@ -1,4 +1,4 @@
-# Loan Default & Financial Risk Analysis Dashboard
+#  Loan Default & Financial Risk Analysis Dashboard
 
 A 3-page interactive Power BI dashboard analyzing loan applications, applicant demographics, employment, credit categories, and default behavior — built to surface which factors actually drive default risk in a loan portfolio.
 
@@ -96,7 +96,7 @@ Base table also carries: `Age`, `CreditScore`, `Income`, `DTIRatio` (aggregatabl
 | Measure | DAX Concepts Used |
 |---|---|
 | `Average Income by Employment type` | `CALCULATE`, `AVERAGE`, `ALLEXCEPT` |
-| `Default Rate by Employment type` | `CALCULATE`, `COUNTROWS`, `DIVIDE`, `ALLEXCEPT`, `FILTER` |
+| `Default Rate by Employment type` | `CALCULATE`, `COUNTROWS`, `DIVIDE`, `ALL`, `ALLEXCEPT`, `FILTER` |
 | `Default Rate by Year` | `CALCULATE`, `COUNTROWS`, `DIVIDE`, `ALLEXCEPT`, `FILTER` |
 | `Loan Amount by Purpose` | `SUMX`, `FILTER`, `NOT`, `ISBLANK` |
 
@@ -120,14 +120,23 @@ Base table also carries: `Age`, `CreditScore`, `Income`, `DTIRatio` (aggregatabl
 
 ---
 
-## Process
+## Data Pipeline (Dataflow Architecture)
 
-1. Loaded dataset into Power BI Desktop; imported via SQL Server / Dataflow for a repeatable pipeline.
-2. Data quality check in Power Query (column profiling, missing values, type consistency).
-3. Cleaned and transformed data; built categorical bins (age, credit score, income).
-4. Built DAX measures for default rate, average/median loan amount, YOY and YTD calculations.
-5. Designed 3 analytical pages with consistent theme, formatting, and cross-filtering.
-6. Published to Power BI Service with scheduled refresh.
+Instead of loading a flat file directly into Power BI Desktop, this project was built as a proper Dataflow-backed pipeline so the data source is centralized and refreshable independent of the report file:
+
+1. **Standard Mode Gateway** installed and configured — required so Power BI Service can reach an on-premises SQL Server.
+2. **Microsoft SQL Server** installed locally as the source database.
+3. **Data imported into SQL Server** from the raw dataset.
+4. **Dataflow created in Power BI Service**, pointing at the SQL Server tables — this is the reusable, centralized data layer (other reports/datasets could reuse the same dataflow instead of re-importing from SQL each time).
+5. **Power BI Desktop connects to the Dataflow** (not directly to SQL) to build the report — decouples report development from the source connection.
+6. Column definitions and dataset description documented before modeling.
+7. Data types, profiling, and quality checks done in Power Query Editor (nulls, distributions, consistency).
+8. Categorical bins (`Age Groups`, `Credit Score Bins`, `Income Bracket`) built as calculated columns.
+9. DAX measures built (see below) and validated against manual/expected values for each metric.
+10. Report designed across 3 pages with consistent theme and cross-filtering.
+11. Published to Power BI Service with **scheduled refresh** on the dataflow and **incremental refresh** configured, so the report updates without a full manual reload each time.
+
+**Why this matters:** a Dataflow + Gateway setup mirrors how BI is actually run in a company — a report built by loading a CSV directly into Desktop doesn't scale or refresh on its own. This structure is closer to a real production setup.
 
 ---
 
