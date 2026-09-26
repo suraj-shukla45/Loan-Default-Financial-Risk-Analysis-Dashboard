@@ -159,6 +159,8 @@ Power BI · DAX · Power Query · Data Cleaning · Data Transformation · Data V
 
 *(Add exported PNGs here, e.g. `assets/page1-overview.png`, and replace the lines below)*
 
-<img width="1497" height="831" alt="Image" src="https://github.com/user-attachments/assets/aeb12e06-3ade-471a-b9f8-5e8dd429931e" />
-<img width="1507" height="826" alt="Image" src="https://github.com/user-attachments/assets/0dcff296-7958-4132-a191-75a316a99937" />
+
 <img width="1512" height="841" alt="Image" src="https://github.com/user-attachments/assets/27267d5a-e713-48b2-9c48-d90c20fac1e6" />
+
+<img width="1507" height="826" alt="Image" src="https://github.com/user-attachments/assets/0dcff296-7958-4132-a191-75a316a99937" />
+<img width="1497" height="831" alt="Image" src="https://github.com/user-attachments/assets/aeb12e06-3ade-471a-b9f8-5e8dd429931e" />
