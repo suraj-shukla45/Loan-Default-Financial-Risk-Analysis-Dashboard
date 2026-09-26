@@ -159,6 +159,4 @@ Power BI · DAX · Power Query · Data Cleaning · Data Transformation · Data V
 
 *(Add exported PNGs here, e.g. `assets/page1-overview.png`, and replace the lines below)*
 
-![Loan Default & Overview](assets/page1-overview.png)
-![Applicant Demographics & Financial Profile](assets/page2-demographics.png)
-![Financial Risk Metrics](assets/page3-risk-metrics.png)
+<img width="1497" height="831" alt="Screenshot 2026-09-27 020124" src="https://github.com/user-attachments/assets/36bd1427-8d2e-4d2a-91b5-cadee49e4a15" />
