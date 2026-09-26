@@ -141,7 +141,7 @@ Power BI · DAX · Power Query · Data Cleaning · Data Transformation · Data V
 
 ## Dashboard Screenshots
 
-*(Add exported PNGs here, e.g. `assets/page1-overview.png`, and replace the lines below)*
+
 page 1
 
 <img width="1512" height="841" alt="Image" src="https://github.com/user-attachments/assets/27267d5a-e713-48b2-9c48-d90c20fac1e6" />
