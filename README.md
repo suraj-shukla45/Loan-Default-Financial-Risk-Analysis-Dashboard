@@ -1,7 +1,7 @@
 #  Loan Default & Financial Risk Analysis Dashboard
 
 A 3-page interactive Power BI dashboard analyzing loan applications, applicant demographics, employment, credit categories, and default behavior — built to surface which factors actually drive default risk in a loan portfolio.
-
+### Dashboard Link : https://suraj-shukla45.github.io/Loan-Default-Financial-Risk-Analysis-Dashboard/
 ---
 
 ## Problem Statement
