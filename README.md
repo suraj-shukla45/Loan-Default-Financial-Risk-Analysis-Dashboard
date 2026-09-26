@@ -10,11 +10,13 @@ Financial institutions need to know **which applicant characteristics actually p
 
 ---
 
-##Key Insights
+## Key Insights
 Employment type: Unemployed applicants show the highest default rate, while full-time applicants show the lowest in the displayed employment-type analysis.
 Loan purpose: Total loan amounts are quite similar across purposes, staying around 6.5B.
 Age group: Average loan amounts remain relatively consistent across age groups, around 127K.
 Yearly default rate: Default rates fluctuate only slightly across 2013–2018, remaining around 11.5%–11.75%.
+
+---
 
 ## Report Structure
 
